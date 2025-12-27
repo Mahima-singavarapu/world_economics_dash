@@ -1,0 +1,46 @@
+World Economic Dataset:
+
+This dataset was created as part of a web scraping practice project, combining information from two different sources:
+
+TradingEconomics.com → economic indicators such as GDP, growth, interest rate, inflation, unemployment, etc.
+REST Countries API → geographic and demographic details such as country name, currency, capital, language, borders, and more.
+The two sources are merged into a single dataset that can be useful for:
+
+Global economic analysis
+Geopolitical and demographic visualizations
+Machine learning experiments
+Country-level comparative studies
+The scraping and data processing code is available in my GitHub repo
+
+
+The dataset has 173 rows and 19 columns.
+
+There are a few null values:
+capital             1
+borders            24
+GDP Growth         72
+Interest Rate      11
+Inflation Rate      1
+Jobless Rate        2
+Gov. Budget         7
+Debt/GDP            8
+Current Account     6
+
+One country Macau has its capital value as null, I'm dropping that value
+
+And also the one country that has its inflation rate as null I'm dropping it
+
+Lets drop both Monaco and Macau
+
+For the borders, I'm leaving the null values as they are.
+
+From the online resources the GDP growth could be a null value if there is no previous year to compare, missing GDP from previous or current year,
+or if the country is newly added.
+
+Similarly for the rest of the columns I'm leaving the nulls as they are because these nulls could actually mean missing data for that time.
+
+After cleaning now the new dataset has 171 rows.
+
+
+
+
